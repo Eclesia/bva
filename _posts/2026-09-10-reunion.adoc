@@ -61,16 +61,9 @@
 |Cell in column 4, row 6
 |===
 
-NOTE: Wolpertingers are known to nest in server racks.
-Enter at your own risk.
 
-TIP: This is Example text for describe something.
+DES DIAGRAMMES : https://plantuml.com/fr/
 
-IMPORTANT: This is Example text for describe something.
-
-CAUTION: This is Example text for describe something.
-
-WARNING: This is Example text for describe something.
 
 
 [plantuml, format="png", id="myId"]
@@ -96,5 +89,106 @@ note "This note is connected\nto several objects." as N2
 N2 .. (Use)
 @enduml
 ....
+
+
+
+[plantuml, format="png", id="myId2"]
+....
+@startuml
+participant Participant as Foo
+actor       Actor       as Foo1
+boundary    Boundary    as Foo2
+control     Control     as Foo3
+entity      Entity      as Foo4
+database    Database    as Foo5
+collections Collections as Foo6
+queue       Queue       as Foo7
+Foo -> Foo1 : To actor 
+Foo -> Foo2 : To boundary
+Foo -> Foo3 : To control
+Foo -> Foo4 : To entity
+Foo -> Foo5 : To database
+Foo -> Foo6 : To collections
+Foo -> Foo7: To queue
+@enduml
+
+....
+
+
+[plantuml, format="png", id="myId3"]
+....
+@startuml
+' Split into 4 pages
+page 2x2
+skinparam pageMargin 10
+skinparam pageExternalColor gray
+skinparam pageBorderColor black
+
+class BaseClass
+
+namespace net.dummy #DDDDDD {
+    .BaseClass <|-- Person
+    Meeting o-- Person
+
+    .BaseClass <|- Meeting
+
+}
+
+namespace net.foo {
+  net.dummy.Person  <|- Person
+  .BaseClass <|-- Person
+
+  net.dummy.Meeting o-- Person
+}
+
+BaseClass <|-- net.unused.Person
+@enduml
+....
+
+[plantuml, format="png", id="myId4"]
+....
+@startuml
+title Point two queries to same activity\nwith `goto`
+start
+if (Test Question?) then (yes)
+'space label only for alignment
+label sp_lab0
+label sp_lab1
+'real label
+label lab
+:shared;
+else (no)
+if (Second Test Question?) then (yes)
+label sp_lab2
+goto sp_lab1
+else
+:nonShared;
+endif
+endif
+:merge;
+@enduml
+....
+
+[plantuml, format="png", id="myId5"]
+....
+@startmindmap
++ OS
+++ Ubuntu
++++ Linux Mint
++++ Kubuntu
++++ Lubuntu
++++ KDE Neon
+++ LMDE
+++ SolydXK
+++ SteamOS
+++ Raspbian
+-- Windows 95
+-- Windows 98
+-- Windows NT
+--- Windows 8
+--- Windows 10
+@endmindmap
+....
+
 
 
