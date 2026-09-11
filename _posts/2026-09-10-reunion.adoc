@@ -1,3 +1,10 @@
+= Reunion
+:showtitle:
+:page-navtitle: Reunion
+:page-excerpt: Excerpt goes here.
+:page-root: ../../../
+
+
 = h1
 == h2
 
