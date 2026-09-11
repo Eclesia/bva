@@ -8,6 +8,8 @@ exclude:
 - Gemfile
 - Gemfile.lock
 - Rakefile
+keep_files:
+- images
 asciidoc: {}
 asciidoctor:
   base_dir: :docdir
@@ -17,3 +19,4 @@ asciidoctor:
     idseparator: _
     stylesdir: css
     source-highlighter: coderay
+    imagesdir: /images
