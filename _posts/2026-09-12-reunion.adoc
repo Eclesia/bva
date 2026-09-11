@@ -1,0 +1,113 @@
+= h1
+== h2
+
+- Edgar Allen Poe
+- Sheri S. Tepper
+- Bill Bryson
+
+. Protons
+. Electrons
+. Neutrons
+
+=== h3
+
+* level 1
+** level 2
+*** level 3
+**** level 4
+***** level 5
+* level 1
+
+==== h4
+
+[cols=2*]
+|===
+|Firefox
+|Web Browser
+
+|Ruby
+|Programming Language
+
+|TorqueBox
+|Application Server
+|===
+
+===== h5
+
+|===
+|Cell in column 1, row 1 |Cell in column 2, row 1 |Cell in column 3, row 1 |Cell in column 4, row 1
+
+4*|Same cell content in columns 1, 2, 3 and 4
+
+4+|Content in a single cell that spans columns 1, 2, 3 and 4
+
+|Cell in column 1, row 4
+|Cell in column 2, row 4
+|Cell in column 3, row 4
+|Cell in column 4, row 4
+
+|Cell in column 1, row 5
+2.2+| Marge column 1, 2 and Row 5, 6
+|Cell in column 4, row 5
+
+|Cell in column 1, row 6
+|Cell in column 4, row 6
+|===
+
+NOTE: Wolpertingers are known to nest in server racks.
+Enter at your own risk.
+
+TIP: This is Example text for describe something.
+
+IMPORTANT: This is Example text for describe something.
+
+CAUTION: This is Example text for describe something.
+
+WARNING: This is Example text for describe something.
+
+
+[ditaa]
+....
+                   +-------------+
+                   | Asciidoctor |-------+
+                   |   diagram   |       |
+                   +-------------+       | PNG out
+                       ^                 |
+                       | ditaa in        |
+                       |                 v
+ +--------+   +--------+----+    /---------------\
+ |        | --+ Asciidoctor +--> |               |
+ |  Text  |   +-------------+    |   Beautiful   |
+ |Document|   |   !magic!   |    |    Output     |
+ |     {d}|   |             |    |               |
+ +---+----+   +-------------+    \---------------/
+     :                                   ^
+     |          Lots of work             |
+     +-----------------------------------+
+....
+
+[plantuml]
+....
+@startuml
+:Main Admin: as Admin
+(Use the application) as (Use)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Use)
+
+note right of Admin : This is an example.
+
+note right of (Use)
+  A note can also
+  be on several lines
+end note
+
+note "This note is connected\nto several objects." as N2
+(Start) .. N2
+N2 .. (Use)
+@enduml
+....
+
+
